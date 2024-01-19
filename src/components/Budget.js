@@ -15,7 +15,7 @@ const Budget = () => {
   
     useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("entrou tempo");
+ 
     }, 500)
 
     return () => clearTimeout(timer)
@@ -36,7 +36,7 @@ const Budget = () => {
   
    return (
     <div className='alert alert-secondary'>
-      <span>Budget: £</span>
+      <span>Budget: $</span>
       <input 
         type="number" 
         step="10" 

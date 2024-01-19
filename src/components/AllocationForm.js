@@ -8,6 +8,11 @@ const AllocationForm = (props) => {
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+    const curr = "£";
+
+    if (AppContext.currency == 'Dollar'){
+        curr = '$'
+    }
 
     const submitEvent = () => {
 
@@ -61,7 +66,7 @@ const AllocationForm = (props) => {
                   </select>
                   
                   <span>&nbsp;&nbsp;&nbsp;</span>
-                   <div>£</div>
+                   <div>$</div>
                     <input
                         required='required'
                         type='number'
