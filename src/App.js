@@ -44,7 +44,8 @@ const App = () => {
                     <ExpenseTotal />
                 </div>
                         }        
-                       
+                    <div className='row mt-3'>
+                    <h5>Allocation</h5> 
                         {
                             /* Add ExpenseList component here */
                             <div className='col-sm'>
@@ -58,13 +59,15 @@ const App = () => {
                     <ExpenseItem />
                 </div>
                         }        
-
+                    <h5>Change allocation</h5> 
                         {
                             /* Add AllocationForm component here under */
                             <div className='col-sm'>
                     <AllocationForm />
                 </div>
-                        }        
+                        }  
+                        
+                </div>      
 
                 </div>
             </div>
