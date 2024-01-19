@@ -41,11 +41,38 @@ const ExpenseItem = (props) => {
         <tr>
         <td>{props.name}</td>
         <td>${props.cost}</td>
-        <td><TiPlus size= '2em' onClick={event=> increaseAllocation(props.name)}>+</TiPlus></td>
-        <td><TiMinus size='2em' onClick={event => decreaseAllocation(props.name)}>-</TiMinus></td>
-        <td><TiDelete size='2em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><TiPlus style = {styles.greenButton} size= '2em' onClick={event=> increaseAllocation(props.name)}>+</TiPlus></td>
+        <td><TiMinus style = {styles.redButton} size='2em' onClick={event => decreaseAllocation(props.name)}>-</TiMinus></td>
+        <td><TiDelete size='3em' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
+
+
     );
 };
 
 export default ExpenseItem;
+
+const styles = {
+    greenButton: {
+      background: 'green',
+      color: 'white',
+      width: '30px', 
+      height: '30px', 
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '50%',
+      cursor: 'pointer',
+    },
+    redButton: {
+      background: 'red',
+      color: 'white',
+      width: '30px', 
+      height: '30px', 
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '50%', 
+      cursor: 'pointer',
+    },
+  };
